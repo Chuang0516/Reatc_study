@@ -1,0 +1,23 @@
+.my-active {
+  color: red;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+
+.tabbar ul {
+  display: flex;
+}
+
+.tabbar ul li {
+  flex: 1;
+  list-style: none;
+}
