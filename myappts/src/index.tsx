@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './04-router/App'
+import App from './05-redux/App'
 import reportWebVitals from './reportWebVitals'
 // import './02-class+ts/01-state'
 

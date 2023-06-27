@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 import IndexRouter from './router'
+import store from './redux/store'
 
-export default function App() {
-  return (
-    <div>
-      <IndexRouter />
-      <ul>
-        <li>电影</li>
-        <li>影院</li>
-        <li>我的</li>
-      </ul>
-    </div>
-  )
+export default class App extends Component {
+  state = {
+    isShow: store.getState().isShow,
+  }
+
+  componentDidMount() {
+    store.subscribe(() => {
+      this.setState({
+        isShow: store.getState().isShow,
+      })
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <IndexRouter />
+        {this.state.isShow && (
+          <ul>
+            <li>电影</li>
+            <li>影院</li>
+            <li>我的</li>
+          </ul>
+        )}
+      </div>
+    )
+  }
 }
